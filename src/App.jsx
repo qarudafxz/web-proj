@@ -1,22 +1,29 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
 
-import Navbar from './components/Navbar';
-import Restaurants from './components/Restaurants';
-import Cards from './components/Cards';
+import Main from "./Pages/Main.jsx";
+import Login from "./Pages/Login.jsx";
 
-import bgPic from './assets/bg.webp';
-import './index.css';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <div className="mx-5">
-        <Navbar />
-        <img src={bgPic} className="sm:w-full h-2/6 md:h-1/4 lg:h-1/3 rounded-3xl"></img>
-        <Restaurants />
-        <Cards />
+    <Router>
+      <div>
+        <Routes>
+          <Route exact 
+            path="/" 
+            element={<Main />}>
+          </Route>
+          <Route exact 
+            path="/login" 
+            element={<Login />}>
+          </Route>
+        </Routes>
       </div>
-    </div>
+    </Router>
   )
 }
 
