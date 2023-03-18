@@ -17,3 +17,14 @@ export const fetchFoodTitle = async (food) => {
 		{ query: food }
 	);
 };
+
+// const fetchFood = async (name) => {
+// 	await fetch(`https://api.spoonacular.com/food/menuItems/search?query=${name}`)
+// 		.then((res) => res.json())
+// 		.then((data) => {
+// 			console.log(data);
+// 		})
+// 		.catch((err) => {
+// 			throw err;
+// 		});
+// };

@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { GoSettings } from 'react-icons/go'
 
+// import { fetchFood } from '../api/fetchFood';
+
+
 const Restaurants = () => {
   const [foodName, setFoodName] = useState(null);
 
@@ -15,7 +18,11 @@ const Restaurants = () => {
     }
   }
 
-  console.log(foodName);
+  // useEffect(() => {
+  //   fetchFood(foodName);
+  // },[foodName]);
+
+  // console.log(foodName);
   
   return (
     <div>
